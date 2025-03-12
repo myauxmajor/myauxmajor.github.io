@@ -1,3 +1,3 @@
 document.addEventListener("DOMContentLoaded", function() {
-    alert("Welcome to my website!");
+    alert("This page is under contruction!");
 });
