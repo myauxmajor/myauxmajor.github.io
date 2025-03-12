@@ -1,8 +1,8 @@
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #d0e8ff;
-    color: #333333;
+    background-color: #b3e5fc; /* Soft Aqua Blue */
+    color: #1a237e; /* Deep Navy Blue */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -10,7 +10,7 @@ body {
 
 /* Header */
 header {
-    background: #333;
+    background: #0288d1; /* Turquoise */
     color: white;
     padding: 20px;
 }
@@ -22,11 +22,12 @@ section {
     background: white;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #b0bec5; /* Cool Gray */
 }
 
 /* Footer */
 footer {
-    background: #222;
+    background: #0288d1; /* Turquoise */
     color: white;
     padding: 10px;
     margin-top: 20px;
@@ -37,4 +38,5 @@ img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    border: 3px solid #ff6f61; /* Coral Pink */
 }
