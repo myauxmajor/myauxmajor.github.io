@@ -146,3 +146,54 @@ button {
 .flip-back a:hover {
     text-decoration: underline;
 }
+
+/* Back Side - Links with Blurred Album Art */
+.flip-back {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
+    color: white;
+    transform: rotateY(180deg);
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Blurred Album Cover Behind Links */
+.flip-back::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("assets/images/againcoverart.jpg") center/cover no-repeat;
+    filter: blur(10px); /* Controls blur effect */
+    opacity: 0.3; /* Makes it faint but still visible */
+    z-index: 0;
+}
+
+/* Ensure Links Appear Over the Background */
+.flip-back ul {
+    list-style: none;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.flip-back li {
+    margin: 10px 0;
+}
+
+.flip-back a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.flip-back a:hover {
+    color: #ffcc00; /* Highlight link on hover */
+}
