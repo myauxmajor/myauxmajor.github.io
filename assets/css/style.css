@@ -70,8 +70,8 @@ button {
 
 /* Flip Container */
 .flip-container {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     perspective: 1000px;
     margin: 20px auto;
     cursor: pointer;
