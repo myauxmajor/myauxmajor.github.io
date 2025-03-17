@@ -66,7 +66,87 @@ button {
     margin: 10px;
     transition: background 0.3s;
 }
-
+/*
 button:hover {
     background-color: #026aa7; /* Slightly darker turquoise on hover */
+}
+*/
+
+/* Flip Container */
+.flip-container {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.flip-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-container.flipped .flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Front & Back Sides */
+.flip-front, .flip-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* Front Side - Album Cover */
+.flip-front {
+    background-color: #fff;
+}
+
+.flip-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect: Expand */
+.flip-front img:hover {
+    transform: scale(1.05);
+}
+
+/* Back Side - Links */
+.flip-back {
+    background-color: #1e1e1e;
+    color: white;
+    transform: rotateY(180deg);
+    flex-direction: column;
+    text-align: center;
+}
+
+.flip-back ul {
+    list-style: none;
+    padding: 0;
+}
+
+.flip-back li {
+    margin: 10px 0;
+}
+
+.flip-back a {
+    color: #0288d1;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.flip-back a:hover {
+    text-decoration: underline;
 }
