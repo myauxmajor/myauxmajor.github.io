@@ -43,7 +43,7 @@ img {
 
 .cover-art {
     display: block;
-    width: 600px; /* Adjust size as needed */
+    width: 500px; /* Adjust size as needed */
     max-width: 100%; /* Makes it responsive */
     height: auto; /* Keeps aspect ratio */
     margin: 20px auto; /* Centers the image */
@@ -51,6 +51,6 @@ img {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
 }
 .cover-art:hover {
-    transform: scale(3.05); /* Slight zoom effect */
+    transform: scale(1.05); /* Slight zoom effect */
     transition: transform 0.3s ease-in-out;
 }
