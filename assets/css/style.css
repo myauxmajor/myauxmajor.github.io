@@ -149,18 +149,19 @@ button {
 
 /* Back Side - Links with Blurred Album Art */
 .flip-back {
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark overlay */
-    color: white;
-    transform: rotateY(180deg);
-    flex-direction: column;
-    text-align: center;
-    display: flex;
     position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    backdrop-filter: blur(10px); /* Blurs everything behind it */
     border-radius: 10px;
-    overflow: hidden;
 }
 
-/* Blurred Album Cover Behind Links */
+/* Blurred Album Cover as Background */
 .flip-back::before {
     content: "";
     position: absolute;
@@ -169,8 +170,8 @@ button {
     width: 100%;
     height: 100%;
     background: url("assets/images/againcoverart.jpg") center/cover no-repeat;
-    filter: blur(10px); /* Controls blur effect */
-    opacity: 0.3; /* Makes it faint but still visible */
+    filter: blur(15px); /* Stronger blur effect */
+    opacity: 0.2; /* Makes it faint but visible */
     z-index: 0;
 }
 
@@ -179,7 +180,7 @@ button {
     list-style: none;
     padding: 20px;
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Keeps links visible above background */
 }
 
 .flip-back li {
