@@ -43,7 +43,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 15px; /* Adds spacing between buttons */
-    margin-top: 80px;
+    margin-top: 20px; /* Adjusts spacing below the logo */
 }
 
 /* Navigation Buttons */
@@ -51,7 +51,10 @@ body {
     text-decoration: none;
 }
 
-.page-buttons button {
+/* ========================= */
+/*  GLOBAL BUTTON STYLING   */
+/* ========================= */
+button {
     background-color: #0288d1; /* Turquoise */
     color: white;
     padding: 15px 30px;
@@ -66,7 +69,7 @@ body {
 }
 
 /* Button Hover Effect */
-.page-buttons button:hover {
+button:hover {
     background-color: #026aa7;
 }
 
@@ -83,7 +86,7 @@ body {
     .page-buttons button {
         width: 80%; /* Makes all buttons equal width on mobile */
         max-width: 300px; /* Prevents them from being too wide */
-        padding: 15px 0; /* Ensures consistent height */
+        padding: 20px 0; /* Ensures consistent height */
         font-size: 18px;
     }
 }
