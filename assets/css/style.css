@@ -147,6 +147,22 @@ button:hover {
     color: #ffcc00; /* Highlight link on hover */
 }
 
+/* Home Page Logo (Default for Desktop) */
+.home-logo {
+    width: 700px; /* Large for desktop */
+    max-width: 80%; /* Ensures it doesn't get too big */
+    height: auto;
+    display: block;
+    margin: 50px auto 20px auto; /* Centers logo with spacing */
+}
+
+/* Adjustments for Medium Screens (Tablets) */
+@media screen and (max-width: 900px) {
+    .home-logo {
+        width: 500px; /* Slightly smaller on tablets */
+    }
+}
+
 /* Mobile Adjustments */
 @media screen and (max-width: 600px) {
     /* Resize the album cover for smaller screens */
@@ -177,22 +193,10 @@ button:hover {
     .flip-back a {
         font-size: 14px;
     }
-}
 
-
-/* Home Page Logo (Resize for Mobile) */
-.home-logo {
-    width: 700px; /* Adjust size as needed */
-    max-width: 100%; /* Makes it responsive */
-    height: auto; /* Maintains aspect ratio */
-    display: block;
-    margin: 50px auto 20px auto; /* Centers logo and adds spacing */
-}
-
-/* Mobile Adjustments */
-@media screen and (max-width: 600px) {
+    /* Reduce home page logo size */
     .home-logo {
-        width: 300px; /* Reduce size on mobile */
+        width: 300px;
         margin: 20px auto 10px auto; /* Adjust spacing */
     }
 }
