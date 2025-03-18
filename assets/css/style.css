@@ -192,7 +192,7 @@ button:hover {
 /* Mobile Adjustments */
 @media screen and (max-width: 600px) {
     .home-logo {
-        width: 150px; /* Reduce size on mobile */
+        width: 300px; /* Reduce size on mobile */
         margin: 20px auto 10px auto; /* Adjust spacing */
     }
 }
