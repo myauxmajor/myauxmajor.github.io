@@ -55,6 +55,15 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 
+/* Position the button in the top left corner */
+.button-container {
+    position: absolute;
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    z-index: 10; /* Ensures it stays above other elements */
+}
+
+/* Style the button */
 button {
     background-color: #0288d1; /* Turquoise */
     color: white;
@@ -63,9 +72,14 @@ button {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin: 10px;
     transition: background 0.3s;
 }
+
+/* Optional: Make the button stand out when hovered */
+button:hover {
+    background-color: #026aa7;
+}
+
 
 
 /* Flip Container */
