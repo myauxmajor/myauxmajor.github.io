@@ -79,15 +79,16 @@ button:hover {
         display: flex;
         flex-direction: column; /* Stack buttons vertically */
         align-items: center;
-        gap: 10px; /* Adds spacing between buttons */
+        gap: 15px; /* Adds spacing between buttons */
         margin-top: 40px;
     }
 
     .page-buttons button {
         width: 80%; /* Makes all buttons equal width on mobile */
         max-width: 300px; /* Prevents them from being too wide */
-        padding: 20px 0; /* Ensures consistent height */
+        height: 60px; /* Explicit height for taller buttons */
         font-size: 18px;
+        padding: 20px 0; /* Additional vertical padding */
     }
 }
 
