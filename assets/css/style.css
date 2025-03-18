@@ -182,7 +182,7 @@ button:hover {
 
 /* Home Page Logo (Resize for Mobile) */
 .home-logo {
-    width: 200px; /* Adjust size as needed */
+    width: 700px; /* Adjust size as needed */
     max-width: 100%; /* Makes it responsive */
     height: auto; /* Maintains aspect ratio */
     display: block;
