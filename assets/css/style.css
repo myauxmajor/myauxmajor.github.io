@@ -178,3 +178,47 @@ button:hover {
         font-size: 14px;
     }
 }
+
+
+/* Home Page Logo (Resize for Mobile) */
+.home-logo {
+    width: 250px; /* Adjust size as needed */
+    max-width: 80%; /* Makes it responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    margin: 40px auto 20px auto; /* Centers logo and adds spacing */
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 600px) {
+    .home-logo {
+        width: 180px; /* Reduce size on mobile */
+        margin: 20px auto 10px auto; /* Adjust spacing */
+    }
+}
+
+/* Fix Button Spacing */
+.button-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10; /* Ensures it stays above content */
+}
+
+/* Page Navigation Buttons */
+.page-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px; /* Pushes buttons lower to prevent overlap */
+}
+
+.page-buttons a {
+    margin: 10px 0; /* Adds vertical spacing */
+}
+
+/* Shift All Page Content Below Home Button */
+.content {
+    margin-top: 80px; /* Pushes content below the home button */
+    padding: 20px;
+}
