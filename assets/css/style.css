@@ -182,17 +182,17 @@ button:hover {
 
 /* Home Page Logo (Resize for Mobile) */
 .home-logo {
-    width: 250px; /* Adjust size as needed */
-    max-width: 80%; /* Makes it responsive */
+    width: 200px; /* Adjust size as needed */
+    max-width: 100%; /* Makes it responsive */
     height: auto; /* Maintains aspect ratio */
     display: block;
-    margin: 40px auto 20px auto; /* Centers logo and adds spacing */
+    margin: 50px auto 20px auto; /* Centers logo and adds spacing */
 }
 
 /* Mobile Adjustments */
 @media screen and (max-width: 600px) {
     .home-logo {
-        width: 180px; /* Reduce size on mobile */
+        width: 150px; /* Reduce size on mobile */
         margin: 20px auto 10px auto; /* Adjust spacing */
     }
 }
