@@ -1,4 +1,6 @@
-/* Global Styles */
+/* ========================= */
+/*       GLOBAL STYLES       */
+/* ========================= */
 body {
     font-family: Arial, sans-serif;
     background-color: #1e1e1e; /* Dark Gray */
@@ -8,7 +10,87 @@ body {
     text-align: center;
 }
 
-/* Position the button in the top left corner */
+/* ========================= */
+/*       HOME PAGE LOGO      */
+/* ========================= */
+.home-logo {
+    width: 700px; /* Large for desktop */
+    max-width: 80%; /* Ensures it doesn't get too big */
+    height: auto;
+    display: block;
+    margin: 50px auto 20px auto; /* Centers logo with spacing */
+}
+
+/* Adjustments for Medium Screens (Tablets) */
+@media screen and (max-width: 900px) {
+    .home-logo {
+        width: 500px; /* Slightly smaller on tablets */
+    }
+}
+
+/* Mobile Adjustments */
+@media screen and (max-width: 600px) {
+    .home-logo {
+        width: 300px; /* Reduce size for mobile */
+        margin: 20px auto 10px auto; /* Adjust spacing */
+    }
+}
+
+/* ========================= */
+/*     PAGE NAVIGATION      */
+/* ========================= */
+.page-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adds spacing between buttons */
+    margin-top: 80px;
+}
+
+/* Navigation Buttons */
+.page-buttons a {
+    text-decoration: none;
+}
+
+.page-buttons button {
+    background-color: #0288d1; /* Turquoise */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center;
+    width: 200px; /* Ensures all buttons are equal width */
+    display: inline-block;
+}
+
+/* Button Hover Effect */
+.page-buttons button:hover {
+    background-color: #026aa7;
+}
+
+/* Mobile Adjustments for Buttons */
+@media screen and (max-width: 600px) {
+    .page-buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 10px; /* Adds spacing between buttons */
+        margin-top: 40px;
+    }
+
+    .page-buttons button {
+        width: 80%; /* Makes all buttons equal width on mobile */
+        max-width: 300px; /* Prevents them from being too wide */
+        padding: 15px 0; /* Ensures consistent height */
+        font-size: 18px;
+    }
+}
+
+/* ========================= */
+/*  HOME BUTTON POSITIONING  */
+/* ========================= */
 .button-container {
     position: absolute;
     top: 10px;
@@ -16,24 +98,9 @@ body {
     z-index: 10; /* Ensures it stays above other elements */
 }
 
-/* Style the button */
-button {
-    background-color: #0288d1; /* Turquoise */
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-/* Button Hover Effect */
-button:hover {
-    background-color: #026aa7;
-}
-
-/* Flip Container (Desktop Default) */
+/* ========================= */
+/*     FLIP CARD STYLING     */
+/* ========================= */
 .flip-container {
     width: 700px; /* Keeps the original desktop size */
     height: 700px;
@@ -73,7 +140,7 @@ button:hover {
 }
 
 .flip-front img {
-    width: 100%; /* Ensures image scales properly */
+    width: 100%;
     height: 100%;
     max-width: 700px; /* Ensures desktop size remains correct */
     object-fit: cover;
@@ -81,22 +148,20 @@ button:hover {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Hover effect: Expand */
+/* Hover Effect: Expand */
 .flip-front img:hover {
     transform: scale(1.05);
 }
 
-/* Back Side - Links */
+/* ========================= */
+/*      BACK SIDE - LINKS    */
+/* ========================= */
 .flip-back {
     background-color: #1e1e1e;
     color: white;
     transform: rotateY(180deg);
     flex-direction: column;
     text-align: center;
-}
-
-/* Back Side - Links with Blurred Album Art */
-.flip-back {
     position: relative;
     width: 100%;
     height: 100%;
@@ -128,7 +193,7 @@ button:hover {
     list-style: none;
     padding: 20px;
     position: relative;
-    z-index: 1; /* Keeps links visible above background */
+    z-index: 1;
 }
 
 .flip-back li {
@@ -147,25 +212,11 @@ button:hover {
     color: #ffcc00; /* Highlight link on hover */
 }
 
-/* Home Page Logo (Default for Desktop) */
-.home-logo {
-    width: 700px; /* Large for desktop */
-    max-width: 80%; /* Ensures it doesn't get too big */
-    height: auto;
-    display: block;
-    margin: 50px auto 20px auto; /* Centers logo with spacing */
-}
-
-/* Adjustments for Medium Screens (Tablets) */
-@media screen and (max-width: 900px) {
-    .home-logo {
-        width: 500px; /* Slightly smaller on tablets */
-    }
-}
-
-/* Mobile Adjustments */
+/* ========================= */
+/*     MOBILE ADJUSTMENTS    */
+/* ========================= */
 @media screen and (max-width: 600px) {
-    /* Resize the album cover for smaller screens */
+    /* Resize Flip Card */
     .flip-container {
         width: 300px;
         height: 300px;
@@ -189,39 +240,15 @@ button:hover {
         margin-bottom: 10px;
     }
 
-    /* Resize the links */
+    /* Resize links */
     .flip-back a {
         font-size: 14px;
     }
-
-    /* Reduce home page logo size */
-    .home-logo {
-        width: 300px;
-        margin: 20px auto 10px auto; /* Adjust spacing */
-    }
 }
 
-/* Fix Button Spacing */
-.button-container {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 10; /* Ensures it stays above content */
-}
-
-/* Page Navigation Buttons */
-.page-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 80px; /* Pushes buttons lower to prevent overlap */
-}
-
-.page-buttons a {
-    margin: 10px 0; /* Adds vertical spacing */
-}
-
-/* Shift All Page Content Below Home Button */
+/* ========================= */
+/*   SHIFT CONTENT BELOW HOME BUTTON   */
+/* ========================= */
 .content {
     margin-top: 80px; /* Pushes content below the home button */
     padding: 20px;
