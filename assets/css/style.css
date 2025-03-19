@@ -91,14 +91,17 @@ button:hover {
         align-items: center;
         gap: 15px; /* Adds spacing between buttons */
         margin-top: 40px;
+        width: 100%; /* Ensures full width */
     }
 
     .home-page-buttons button {
-        width: 90%; /* Increase width to fill most of the screen */
+        width: 90vw; /* Makes buttons fill 90% of the viewport width */
         max-width: 350px; /* Prevents them from being too wide */
-        height: 60px; /* Ensures taller buttons */
-        font-size: 18px;
-        padding: 20px 0; /* Additional vertical padding */
+        height: 70px; /* Ensures taller buttons */
+        font-size: 20px; /* Makes text easier to read */
+        padding: 20px 0; /* Ensures extra vertical space */
+        text-align: center;
+        display: block; /* Ensures full width stretch */
     }
 }
 
