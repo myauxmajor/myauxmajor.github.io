@@ -249,6 +249,25 @@ button:hover {
         font-size: 14px;
     }
 }
+ /* ========================= */
+    /*  MOBILE BUTTON ADJUSTMENTS */
+    /* ========================= */
+    .page-buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;
+        gap: 15px; /* Adds spacing between buttons */
+        margin-top: 40px;
+    }
+
+    .page-buttons button {
+        width: 90%; /* Increase width to fill most of the screen */
+        max-width: 350px; /* Prevents them from being too wide */
+        height: 60px; /* Ensures taller buttons */
+        font-size: 18px;
+        padding: 20px 0; /* Additional vertical padding */
+    }
+}
 
 /* ========================= */
 /*   SHIFT CONTENT BELOW HOME BUTTON   */
