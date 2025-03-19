@@ -73,9 +73,19 @@ button:hover {
     background-color: #026aa7;
 }
 
-/* Mobile Adjustments for Buttons */
+/* ========================= */
+/*  HOME PAGE BUTTON STYLING */
+/* ========================= */
+.home-page-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Adds spacing between buttons */
+    margin-top: 40px;
+}
+
+/* Mobile Adjustments for Home Page Buttons */
 @media screen and (max-width: 600px) {
-    .page-buttons {
+    .home-page-buttons {
         display: flex;
         flex-direction: column; /* Stack buttons vertically */
         align-items: center;
@@ -83,10 +93,10 @@ button:hover {
         margin-top: 40px;
     }
 
-    .page-buttons button {
-        width: 80%; /* Makes all buttons equal width on mobile */
-        max-width: 300px; /* Prevents them from being too wide */
-        height: 60px; /* Explicit height for taller buttons */
+    .home-page-buttons button {
+        width: 90%; /* Increase width to fill most of the screen */
+        max-width: 350px; /* Prevents them from being too wide */
+        height: 60px; /* Ensures taller buttons */
         font-size: 18px;
         padding: 20px 0; /* Additional vertical padding */
     }
@@ -247,25 +257,6 @@ button:hover {
     /* Resize links */
     .flip-back a {
         font-size: 14px;
-    }
-}
- /* ========================= */
-    /*  MOBILE BUTTON ADJUSTMENTS */
-    /* ========================= */
-    .page-buttons {
-        display: flex;
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: center;
-        gap: 15px; /* Adds spacing between buttons */
-        margin-top: 40px;
-    }
-
-    .page-buttons button {
-        width: 90%; /* Increase width to fill most of the screen */
-        max-width: 350px; /* Prevents them from being too wide */
-        height: 60px; /* Ensures taller buttons */
-        font-size: 18px;
-        padding: 20px 0; /* Additional vertical padding */
     }
 }
 
