@@ -72,6 +72,17 @@ button {
 button:hover {
     background-color: #026aa7;
 }
+/* ========================= */
+/*  REMOVE UNDERLINE FROM BUTTON LINKS */
+/* ========================= */
+.home-page-buttons a {
+    text-decoration: none; /* Removes underline */
+}
+
+.home-page-buttons button {
+    text-decoration: none; /* Ensures button text has no underline */
+    font-weight: bold; /* Optional: Makes text bolder */
+}
 
 /* ========================= */
 /*  HOME PAGE BUTTON STYLING */
