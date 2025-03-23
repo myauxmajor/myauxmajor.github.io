@@ -1,29 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-------------------------->
     <!-- Google tag (gtag.js) -->
-    <!-------------------------->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QH1507240C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QH1507240C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QH1507240C');
+    </script>
 
-  gtag('config', 'G-QH1507240C');
-</script>
-
-    <!------------------------->
-    <!-- PAGE HEADER INFORMATION -->
-    <!---------------------------->
+    <!-- Page Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MYAUX</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
-    
-    <!-- Stylesheet -->
+
+    <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -34,16 +29,15 @@
     <!-- Logo Image -->
     <img src="assets/images/logo/myauxlogo.png" alt="Myaux Logo" class="home-logo">
 
-<div class="home-page-buttons">
-    <a href="AGAIN.html"><button>AGAIN?</button></a>
-    <a href="CARPE DIEM.html"><button>CARPE DIEM</button></a>
-    <a href="REGULAR.html"><button>REGULAR</button></a>
-    <a href="GOT ME.html"><button>GOT ME</button></a>
-    <a href="COLLUM - EP.html"><button>COLLUM - EP</button></a>
-    <a href="222.html"><button>222</button></a>
-    <a href="DOUBLE UP.html"><button>DOUBLE UP</button></a>
-</div>
-
+    <!-- Home Page Buttons -->
+    <div class="home-page-buttons">
+        <a href="AGAIN.html"><button>AGAIN?</button></a>
+        <a href="CARPE DIEM.html"><button>CARPE DIEM</button></a>
+        <a href="REGULAR.html"><button>REGULAR</button></a>
+        <a href="GOT ME.html"><button>GOT ME</button></a>
+        <a href="COLLUM - EP.html"><button>COLLUM - EP</button></a>
+        <a href="222.html"><button>222</button></a>
+        <a href="DOUBLE UP.html"><button>DOUBLE UP</button></a>
         <!-- Uncomment to enable more buttons once ready -->
         <!-- <a href="contact.html"><button>Contact</button></a> -->
     </div>
@@ -51,8 +45,15 @@
     <!-- Updates Message -->
     <p>Instagram: @myauxllc</p>
 
-    <!-- JavaScript File -->
+    <!-- Site JS -->
     <script src="assets/js/script.js"></script>
+
+    <!-- Visitor Ping Script -->
+    <script>
+      fetch("https://script.google.com/macros/s/AKfycbwAuNVPxTpNYIdMFdH9Zu_2NyAu1B3sGX5fb2E9aAJiltuZLiAx6wuec0jhXVJB0c4-/exec?page=HOME")
+        .then(res => console.log("Visitor ping sent"))
+        .catch(err => console.error("Ping failed", err));
+    </script>
 
 </body>
 </html>
