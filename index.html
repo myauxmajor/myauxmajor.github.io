@@ -38,7 +38,6 @@
         <a href="COLLUM - EP.html"><button>COLLUM - EP</button></a>
         <a href="222.html"><button>222</button></a>
         <a href="DOUBLE UP.html"><button>DOUBLE UP</button></a>
-        <!-- Uncomment to enable more buttons once ready -->
         <!-- <a href="contact.html"><button>Contact</button></a> -->
     </div>
 
@@ -48,37 +47,11 @@
     <!-- Site JS -->
     <script src="assets/js/script.js"></script>
 
-    <!-- ✅ Visitor Ping with IP + Location + Debug Logs -->
-    <script>
-      fetch("https://ip-api.com/json/")
-        .then(res => res.json())
-        .then(data => {
-          console.log("📡 IP-API Response:", data); // ✅ Log the full API response
-
-          if (!data || !data.query) {
-            console.warn("❗ No IP data found. Skipping ping.");
-            return;
-          }
-
-          const params = new URLSearchParams({
-            page: "HOME",
-            ip: data.query || "Missing IP",
-            city: data.city || "Unknown City",
-            region: data.regionName || "Unknown Region",
-            country: data.country || "Unknown Country",
-            isp: data.isp || "Unknown ISP"
-          });
-
-          const pingUrl = "https://script.google.com/macros/s/AKfycbwEKvM4gfTsiglBjbaN8GoT-fUscpi-9rqDdLSmkoKkN9SBLJF5bUMvq0WTe8UfcH_G/exec?" + params.toString();
-
-          console.log("🚀 Sending ping to:", pingUrl);
-
-          fetch(pingUrl)
-            .then(() => console.log("✅ Visitor ping sent with IP + location"))
-            .catch(err => console.error("❌ Ping failed", err));
-        })
-        .catch(err => console.error("❌ Failed to fetch IP info:", err));
-    </script>
+    <!-- ✅ Visitor Ping with page parameter -->
+    <img 
+      src="https://script.google.com/macros/s/AKfycbwEKvM4gfTsiglBjbaN8GoT-fUscpi-9rqDdLSmkoKkN9SBLJF5bUMvq0WTe8UfcH_G/exec?page=HOME" 
+      style="display: none;" 
+      alt="Visitor Ping">
 
 </body>
 </html>
