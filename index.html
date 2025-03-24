@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QH1507240C"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -10,26 +10,22 @@
       gtag('config', 'G-QH1507240C');
     </script>
 
-    <!-- Page Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta & Assets -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MYAUX</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/logo/favicon.png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
     <!-- Page Title -->
     <h1>MYAUX</h1>
 
-    <!-- Logo Image -->
-    <img src="assets/images/logo/myauxlogo.png" alt="Myaux Logo" class="home-logo">
+    <!-- Logo -->
+    <img src="assets/images/logo/myauxlogo.png" alt="Myaux Logo" class="home-logo" />
 
-    <!-- Home Page Buttons -->
+    <!-- Navigation Buttons -->
     <div class="home-page-buttons">
         <a href="AGAIN.html"><button>AGAIN?</button></a>
         <a href="CARPE DIEM.html"><button>CARPE DIEM</button></a>
@@ -38,34 +34,19 @@
         <a href="COLLUM - EP.html"><button>COLLUM - EP</button></a>
         <a href="222.html"><button>222</button></a>
         <a href="DOUBLE UP.html"><button>DOUBLE UP</button></a>
-        <!-- <a href="contact.html"><button>Contact</button></a> -->
     </div>
 
-    <!-- Updates Message -->
+    <!-- Updates -->
     <p>Instagram: @myauxllc</p>
 
     <!-- Site JS -->
     <script src="assets/js/script.js"></script>
 
-    <!-- ✅ Visitor Ping with location only -->
-    <script>
-      fetch("https://ipinfo.io/json?token=4da7119875328e")
-        .then(res => res.json())
-        .then(data => {
-          const params = new URLSearchParams({
-            page: "HOME",
-            city: data.city,
-            region: data.region,
-            country: data.country,
-            isp: data.org
-          });
-
-          fetch("https://script.google.com/macros/s/AKfycbwEKvM4gfTsiglBjbaN8GoT-fUscpi-9rqDdLSmkoKkN9SBLJF5bUMvq0WTe8UfcH_G/exec?" + params.toString())
-            .then(() => console.log("Visitor location ping sent"))
-            .catch(err => console.error("Ping failed", err));
-        })
-        .catch(err => console.error("Location fetch failed", err));
-    </script>
+    <!-- ✅ Server-side visitor ping -->
+    <img 
+      src="https://script.google.com/macros/s/AKfycbwEKvM4gfTsiglBjbaN8GoT-fUscpi-9rqDdLSmkoKkN9SBLJF5bUMvq0WTe8UfcH_G/exec?page=HOME" 
+      style="display: none;" 
+      alt="Visitor Ping" />
 
 </body>
 </html>
