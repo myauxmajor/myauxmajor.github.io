@@ -47,11 +47,25 @@
     <!-- Site JS -->
     <script src="assets/js/script.js"></script>
 
-    <!-- ✅ Visitor Ping with page parameter -->
-    <img 
-      src="https://script.google.com/macros/s/AKfycbwEKvM4gfTsiglBjbaN8GoT-fUscpi-9rqDdLSmkoKkN9SBLJF5bUMvq0WTe8UfcH_G/exec?page=HOME" 
-      style="display: none;" 
-      alt="Visitor Ping">
+    <!-- ✅ Visitor Ping with location only -->
+    <script>
+      fetch("https://ipinfo.io/json?token=4da7119875328e")
+        .then(res => res.json())
+        .then(data => {
+          const params = new URLSearchParams({
+            page: "HOME",
+            city: data.city,
+            region: data.region,
+            country: data.country,
+            isp: data.org
+          });
+
+          fetch("https://script.google.com/macros/s/AKfycbwEKvM4gfTsiglBjbaN8GoT-fUscpi-9rqDdLSmkoKkN9SBLJF5bUMvq0WTe8UfcH_G/exec?" + params.toString())
+            .then(() => console.log("Visitor location ping sent"))
+            .catch(err => console.error("Ping failed", err));
+        })
+        .catch(err => console.error("Location fetch failed", err));
+    </script>
 
 </body>
 </html>
