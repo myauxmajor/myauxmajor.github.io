@@ -48,11 +48,26 @@
     <!-- Site JS -->
     <script src="assets/js/script.js"></script>
 
-    <!-- ✅ Visitor Ping using CORS-safe method -->
-    <img 
-      src="https://script.google.com/macros/s/AKfycbwEKvM4gfTsiglBjbaN8GoT-fUscpi-9rqDdLSmkoKkN9SBLJF5bUMvq0WTe8UfcH_G/exec?page=HOME" 
-      style="display: none;" 
-      alt="Ping">
+    <!-- ✅ Visitor Ping with IP + Location -->
+    <script>
+      fetch("http://ip-api.com/json/")
+        .then(res => res.json())
+        .then(data => {
+          const params = new URLSearchParams({
+            page: "HOME",
+            ip: data.query,
+            city: data.city,
+            region: data.regionName,
+            country: data.country,
+            isp: data.isp
+          });
+
+          fetch("https://script.google.com/macros/s/AKfycbwEKvM4gfTsiglBjbaN8GoT-fUscpi-9rqDdLSmkoKkN9SBLJF5bUMvq0WTe8UfcH_G/exec?" + params.toString())
+            .then(() => console.log("Visitor ping sent with IP"))
+            .catch(err => console.error("Ping failed", err));
+        })
+        .catch(err => console.error("IP API fetch failed", err));
+    </script>
 
 </body>
 </html>
