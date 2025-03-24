@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QH1507240C"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -10,7 +9,6 @@
       gtag('config', 'G-QH1507240C');
     </script>
 
-    <!-- Meta & Assets -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MYAUX</title>
@@ -19,13 +17,10 @@
 </head>
 <body>
 
-    <!-- Page Title -->
     <h1>MYAUX</h1>
 
-    <!-- Logo -->
     <img src="assets/images/logo/myauxlogo.png" alt="Myaux Logo" class="home-logo" />
 
-    <!-- Navigation Buttons -->
     <div class="home-page-buttons">
         <a href="AGAIN.html"><button>AGAIN?</button></a>
         <a href="CARPE DIEM.html"><button>CARPE DIEM</button></a>
@@ -36,17 +31,30 @@
         <a href="DOUBLE UP.html"><button>DOUBLE UP</button></a>
     </div>
 
-    <!-- Updates -->
     <p>Instagram: @myauxllc</p>
 
-    <!-- Site JS -->
     <script src="assets/js/script.js"></script>
 
-    <!-- ✅ Server-side visitor ping -->
-    <img 
-      src="https://script.google.com/macros/s/AKfycbwEKvM4gfTsiglBjbaN8GoT-fUscpi-9rqDdLSmkoKkN9SBLJF5bUMvq0WTe8UfcH_G/exec?page=HOME" 
-      style="display: none;" 
-      alt="Visitor Ping" />
+    <!-- ✅ Client-side IP location fetch + ping -->
+    <script>
+      fetch("https://ipinfo.io/json?token=4da7119875328e")
+        .then(res => res.json())
+        .then(data => {
+          const params = new URLSearchParams({
+            page: "HOME",
+            city: data.city || "Unknown City",
+            region: data.region || "Unknown Region",
+            country: data.country || "Unknown Country",
+            isp: data.org || "Unknown ISP"
+          });
+
+          // Send to your Apps Script Web App
+          fetch("https://script.google.com/macros/s/AKfycbwEKvM4gfTsiglBjbaN8GoT-fUscpi-9rqDdLSmkoKkN9SBLJF5bUMvq0WTe8UfcH_G/exec?" + params.toString())
+            .then(() => console.log("Visitor ping with location sent"))
+            .catch(err => console.error("Ping failed", err));
+        })
+        .catch(err => console.error("IP location fetch failed", err));
+    </script>
 
 </body>
 </html>
