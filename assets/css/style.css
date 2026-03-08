@@ -19,6 +19,7 @@ body {
     height: auto;
     display: block;
     margin: 50px auto 20px auto; /* Centers logo with spacing */
+    border-radius: 20px; /* rounds the corners */
 }
 
 /* Adjustments for Medium Screens (Tablets) */
